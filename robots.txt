@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: BASE_URLsitemap.xml
+Sitemap: https://henkka011.github.io/prorust-landing/sitemap.xml
