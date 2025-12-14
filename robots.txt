@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: BASE_URLsitemap.xml

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- (Lisätään myöhemmin) Google Search Console -varmennus -->
+  <!-- PASTE_GSC_META_TAG_HERE -->
+
+  <!-- Google tukee näitä indeksoinnin ohjaukseen -->
+  <meta name="robots" content="index,follow,max-image-preview:large" /> <!-- :contentReference[oaicite:2]{index=2} -->
+
+  <!-- TÄRKEÄ: vaihdat myöhemmin BASE_URL oikein (ohje vaiheissa) -->
+  <link rel="canonical" href="BASE_URL" />
+
+  <title>PRO RUST 5X EU — Solo / Duo / Trio | ProRust</title>
+  <meta name="description" content="PRO RUST 5X (Solo/Duo/Trio). Fast progression, clear rules, active community. Join via Discord and see full info on the official ProRust page." />
+
+  <!-- Open Graph (Discord/Facebook/WhatsApp preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PRO RUST 5X EU — Solo / Duo / Trio" />
+  <meta property="og:description" content="Fast progression. Fair fights. Clear rules. Join now." />
+  <meta property="og:url" content="BASE_URL" />
+  <!-- Voit vaihtaa kuvan myöhemmin omaan; tämä toimii myös ilman kuvaa -->
+  <meta property="og:image" content="https://i.imgur.com/JYh12ur.jpeg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured data: auttaa hakukonetta ymmärtämään sivun (ei takaa sijoitusta) -->
+  <!-- Google käyttää structured dataa sisällön ymmärtämiseen. :contentReference[oaicite:3]{index=3} -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"ProRust",
+        "url":"BASE_URL",
+        "sameAs":[
+          "https://discord.gg/p5A6JVQjDj",
+          "https://steamcommunity.com/groups/ProRustFi/members",
+          "https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu"
+        ]
+      },
+      {
+        "@type":"GameServer",
+        "name":"PRO RUST 5X EU — Solo / Duo / Trio",
+        "url":"BASE_URL",
+        "description":"Rust 5X modded server with Solo/Duo/Trio limits. Official info, links and join instructions.",
+        "game":"Rust",
+        "serverAddress":"202.36.95.230",
+        "serverPort":"21394"
+      }
+    ]
+  }
+  </script>
+  <!-- GameServer on Schema.org-tyyppi. :contentReference[oaicite:4]{index=4} -->
+
+  <style>
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0b0f; color:#fff; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 44px 18px; }
+    .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 22px; }
+    h1 { margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
+    p { margin: 10px 0; color: rgba(255,255,255,.86); font-size: 16px; }
+    .btns { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 16px; }
+    a.btn { display:inline-block; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.18); text-decoration:none; color:#fff; background: rgba(255,255,255,.08); }
+    a.btn.primary { background: rgba(255,255,255,.16); }
+    code { background: rgba(255,255,255,.10); padding: 2px 6px; border-radius: 8px; }
+    .grid { display:grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 16px; }
+    .kpi { padding: 14px; border-radius: 14px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.10); }
+    .small { font-size: 13px; color: rgba(255,255,255,.75); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>PRO RUST 5X EU — Solo / Duo / Trio</h1>
+      <p>Official links + join instructions. Full site info is on Google Sites.</p>
+
+      <div class="grid" aria-label="Key details">
+        <div class="kpi">
+          <div class="small">Server IP:PORT</div>
+          <div><strong>202.36.95.230:21394</strong></div>
+        </div>
+        <div class="kpi">
+          <div class="small">Join (F1)</div>
+          <div><code>connect 202.36.95.230:21394</code></div>
+        </div>
+        <div class="kpi">
+          <div class="small">Search terms</div>
+          <div><strong>rust 5x server • solo duo trio • EU</strong></div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn primary" href="https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu" rel="noopener">Open ProRust Website</a>
+        <a class="btn" href="https://discord.gg/p5A6JVQjDj" rel="noopener">Join Discord</a>
+        <a class="btn" href="https://steamcommunity.com/groups/ProRustFi/members" rel="noopener">Steam Group</a>
+        <a class="btn" href="steam://run/252490/+connect%20202.36.95.230:21394">Steam one-click join</a>
+      </div>
+
+      <p class="small" style="margin-top:14px;">
+        This page is designed for search engines + fast linking. The “full content” lives on your Google Sites page.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
