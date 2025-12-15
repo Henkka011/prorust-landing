@@ -1,0 +1,20 @@
+UPLOAD INSTRUCTIONS (NO COPY/PASTE)
+
+This ZIP is a FULL REPLACE for your GitHub Pages repo: henkka011/prorust-landing
+
+1) Download this ZIP
+2) Unzip it
+3) GitHub -> your repo -> Add file -> Upload files
+4) Upload EVERYTHING from the unzipped folder (including the /assets folder)
+5) Commit changes
+
+Then test:
+- https://henkka011.github.io/prorust-landing/
+- https://henkka011.github.io/prorust-landing/topics.html
+- https://henkka011.github.io/prorust-landing/sitemap.xml
+
+Search Console:
+- Submit sitemap: https://henkka011.github.io/prorust-landing/sitemap.xml
+- Request indexing for:
+  https://henkka011.github.io/prorust-landing/
+  https://henkka011.github.io/prorust-landing/topics.html
