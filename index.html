@@ -2,111 +2,417 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="google-site-verification" content="svWxOJeRRB04MbXvJhCL12SCbI4qjTlP6Zg8RiEPfLg" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <!-- (Lisätään myöhemmin) Google Search Console -varmennus -->
-  <!-- PASTE_GSC_META_TAG_HERE -->
-
-  <!-- Google tukee näitä indeksoinnin ohjaukseen -->
-  <meta name="robots" content="index,follow,max-image-preview:large" /> <!-- :contentReference[oaicite:2]{index=2} -->
-
-  <!-- TÄRKEÄ: vaihdat myöhemmin https://henkka011.github.io/prorust-landing/ oikein (ohje vaiheissa) -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://henkka011.github.io/prorust-landing/" />
 
-  <title>PRO RUST 5X EU — Solo / Duo / Trio | ProRust</title>
-  <meta name="description" content="PRO RUST 5X (Solo/Duo/Trio). Fast progression, clear rules, active community. Join via Discord and see full info on the official ProRust page." />
+  <title>PRO RUST 5X EU — Solo / Duo / Trio | Rust 5x Modded Server</title>
+  <meta name="description" content="PRO RUST 5X EU is a Rust 5x modded server with Solo/Duo/Trio team limits. Fast progression, active Discord, verified join links. F1: connect 202.36.95.230:21394" />
+  <meta name="theme-color" content="#0b0b0f" />
 
-  <!-- Open Graph (Discord/Facebook/WhatsApp preview) -->
+  <!-- Optional: favicons (use your own later if you want) -->
+  <link rel="icon" href="https://i.imgur.com/MpYo2cY.jpeg" />
+  <link rel="apple-touch-icon" href="https://i.imgur.com/MpYo2cY.jpeg" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PRO RUST 5X" />
   <meta property="og:title" content="PRO RUST 5X EU — Solo / Duo / Trio" />
-  <meta property="og:description" content="Fast progression. Fair fights. Clear rules. Join now." />
+  <meta property="og:description" content="Rust 5x modded server (EU). Solo/Duo/Trio limits. Quick join + official links." />
   <meta property="og:url" content="https://henkka011.github.io/prorust-landing/" />
-  <!-- Voit vaihtaa kuvan myöhemmin omaan; tämä toimii myös ilman kuvaa -->
   <meta property="og:image" content="https://i.imgur.com/JYh12ur.jpeg" />
-
+  <meta property="og:image:alt" content="PRO RUST 5X EU — Solo / Duo / Trio" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured data: auttaa hakukonetta ymmärtämään sivun (ei takaa sijoitusta) -->
-  <!-- Google käyttää structured dataa sisällön ymmärtämiseen. :contentReference[oaicite:3]{index=3} -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
-        "@type":"Organization",
-        "name":"ProRust",
+        "@type":"WebSite",
+        "name":"PRO RUST 5X",
         "url":"https://henkka011.github.io/prorust-landing/",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://www.google.com/search?q={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"Organization",
+        "name":"PRO RUST 5X",
+        "url":"https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu",
+        "logo":"https://i.imgur.com/MpYo2cY.jpeg",
         "sameAs":[
           "https://discord.gg/p5A6JVQjDj",
-          "https://steamcommunity.com/groups/ProRustFi/members",
-          "https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu"
+          "https://steamcommunity.com/groups/ProRustFi/members"
         ]
       },
       {
-        "@type":"GameServer",
+        "@type":"WebPage",
         "name":"PRO RUST 5X EU — Solo / Duo / Trio",
         "url":"https://henkka011.github.io/prorust-landing/",
-        "description":"Rust 5X modded server with Solo/Duo/Trio limits. Official info, links and join instructions.",
-        "game":"Rust",
-        "serverAddress":"202.36.95.230",
-        "serverPort":"21394"
+        "about":"Rust 5x modded server in EU with Solo/Duo/Trio team limits",
+        "primaryImageOfPage":"https://i.imgur.com/JYh12ur.jpeg"
       }
     ]
   }
   </script>
-  <!-- GameServer on Schema.org-tyyppi. :contentReference[oaicite:4]{index=4} -->
 
   <style>
-    :root { color-scheme: dark; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0b0f; color:#fff; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 44px 18px; }
-    .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 22px; }
-    h1 { margin: 0 0 10px; font-size: 34px; line-height: 1.1; }
-    p { margin: 10px 0; color: rgba(255,255,255,.86); font-size: 16px; }
+    :root {
+      color-scheme: dark;
+      --bg: #0b0b0f;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.76);
+
+      /* Brand accent (change these to match your website colors if you want) */
+      --accent: #ff3b6b;
+      --accent2:#6d5bff;
+
+      --radius: 18px;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(255,59,107,.22), transparent 55%),
+        radial-gradient(1000px 700px at 90% 0%, rgba(109,91,255,.20), transparent 50%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    a { color: inherit; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 18px 60px; }
+
+    .topbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+    }
+    .brand img {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+    }
+    .brand .name { line-height: 1.05; }
+    .brand .name strong { font-size: 14px; letter-spacing: .35px; }
+    .brand .name span { display:block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .pillrow { display:flex; flex-wrap:wrap; gap: 8px; justify-content:flex-end; }
+    .pill {
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.86);
+      text-decoration:none;
+    }
+    .pill:hover { border-color: rgba(255,255,255,.22); }
+
+    .card {
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: 26px 22px 18px;
+      background:
+        linear-gradient(180deg, rgba(11,11,15,.35), rgba(11,11,15,.92)),
+        url("https://i.imgur.com/JYh12ur.jpeg") center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 3.2vw, 40px);
+      line-height: 1.08;
+      letter-spacing: .2px;
+      text-shadow: 0 12px 30px rgba(0,0,0,.55);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 72ch;
+      color: rgba(255,255,255,.88);
+      font-size: 16px;
+      line-height: 1.55;
+      text-shadow: 0 10px 24px rgba(0,0,0,.45);
+    }
+
+    .content { padding: 18px 22px 24px; }
+
     .btns { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 16px; }
-    a.btn { display:inline-block; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.18); text-decoration:none; color:#fff; background: rgba(255,255,255,.08); }
-    a.btn.primary { background: rgba(255,255,255,.16); }
-    code { background: rgba(255,255,255,.10); padding: 2px 6px; border-radius: 8px; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      text-decoration:none;
+      background: rgba(255,255,255,.07);
+      color: #fff;
+      font-weight: 650;
+    }
+    .btn:hover { border-color: rgba(255,255,255,.24); }
+    .btn.primary {
+      border-color: rgba(255,255,255,.22);
+      background: linear-gradient(135deg, rgba(255,59,107,.34), rgba(109,91,255,.28));
+    }
+    .btn.secondary {
+      background: rgba(255,255,255,.06);
+    }
+
     .grid { display:grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 16px; }
-    .kpi { padding: 14px; border-radius: 14px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.10); }
-    .small { font-size: 13px; color: rgba(255,255,255,.75); }
+    .kpi {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .kpi .small { font-size: 12px; color: rgba(255,255,255,.72); margin-bottom: 6px; }
+    code {
+      background: rgba(255,255,255,.10);
+      padding: 3px 7px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    h2 { margin: 22px 0 10px; font-size: 18px; letter-spacing: .2px; }
+    h3 { margin: 16px 0 8px; font-size: 15px; color: rgba(255,255,255,.92); }
+    p, li { margin: 10px 0; color: rgba(255,255,255,.86); font-size: 16px; line-height: 1.6; }
+    ul { padding-left: 18px; }
+
+    .section {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--panel2);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    .muted { color: rgba(255,255,255,.72); font-size: 13px; }
+    .hr { height:1px; background: rgba(255,255,255,.10); margin: 18px 0; }
+
+    .row {
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top: 10px;
+    }
+    button.copy {
+      cursor:pointer;
+      font: inherit;
+      font-weight: 650;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+    }
+    button.copy:hover { border-color: rgba(255,255,255,.24); }
+    .toast {
+      display:none;
+      margin-left: 6px;
+      font-size: 13px;
+      color: rgba(255,255,255,.78);
+    }
+
+    footer { margin-top: 14px; color: rgba(255,255,255,.62); font-size: 12px; line-height: 1.55; }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="card">
-      <h1>PRO RUST 5X EU — Solo / Duo / Trio</h1>
-      <p>Official links + join instructions. Full site info is on Google Sites.</p>
+    <div class="topbar">
+      <a class="brand" href="https://henkka011.github.io/prorust-landing/" aria-label="PRO RUST 5X home">
+        <img src="https://i.imgur.com/MpYo2cY.jpeg" alt="PRO RUST 5X logo" loading="eager" decoding="async" />
+        <div class="name">
+          <strong>PRO RUST 5X</strong>
+          <span>EU • Solo / Duo / Trio</span>
+        </div>
+      </a>
 
-      <div class="grid" aria-label="Key details">
-        <div class="kpi">
-          <div class="small">Server IP:PORT</div>
-          <div><strong>202.36.95.230:21394</strong></div>
-        </div>
-        <div class="kpi">
-          <div class="small">Join (F1)</div>
-          <div><code>connect 202.36.95.230:21394</code></div>
-        </div>
-        <div class="kpi">
-          <div class="small">Search terms</div>
-          <div><strong>rust 5x server • solo duo trio • EU</strong></div>
-        </div>
+      <div class="pillrow" aria-label="Quick links">
+        <a class="pill" href="#join">Join</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#faq">FAQ</a>
+        <a class="pill" href="#search">Search terms</a>
       </div>
-
-      <div class="btns">
-        <a class="btn primary" href="https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu" rel="noopener">Open ProRust Website</a>
-        <a class="btn" href="https://discord.gg/p5A6JVQjDj" rel="noopener">Join Discord</a>
-        <a class="btn" href="https://steamcommunity.com/groups/ProRustFi/members" rel="noopener">Steam Group</a>
-        <a class="btn" href="steam://run/252490/+connect%20202.36.95.230:21394">Steam one-click join</a>
-      </div>
-
-      <p class="small" style="margin-top:14px;">
-        This page is designed for search engines + fast linking. The “full content” lives on your Google Sites page.
-      </p>
     </div>
+
+    <main class="card">
+      <header class="hero">
+        <h1>PRO RUST 5X EU — Solo / Duo / Trio</h1>
+        <p>
+          This is the official quick-join landing page for <strong>PRO RUST 5X EU</strong>, a <strong>Rust 5x modded server</strong>
+          with <strong>Solo/Duo/Trio</strong> team limits. Use the verified links below to join fast via website, Discord, Steam group,
+          or the in-game console.
+        </p>
+
+        <div class="btns" id="join">
+          <a class="btn primary" href="https://sites.google.com/view/prorust-5x-solo-duo-trio/etusivu" rel="noopener noreferrer">Open ProRust Website</a>
+          <a class="btn secondary" href="https://discord.gg/p5A6JVQjDj" rel="noopener noreferrer">Join Discord</a>
+          <a class="btn" href="https://steamcommunity.com/groups/ProRustFi/members" rel="noopener noreferrer">Steam Group</a>
+          <a class="btn" href="steam://run/252490/+connect%20202.36.95.230:21394">Steam one-click join</a>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="grid" aria-label="Key details">
+          <div class="kpi">
+            <div class="small">Server IP:PORT</div>
+            <div><strong>202.36.95.230:21394</strong></div>
+          </div>
+          <div class="kpi">
+            <div class="small">Join (F1 console)</div>
+            <div><code id="connectCmd">connect 202.36.95.230:21394</code></div>
+            <div class="row">
+              <button class="copy" type="button" id="copyBtn">Copy connect</button>
+              <span class="toast" id="toast">Copied.</span>
+            </div>
+          </div>
+          <div class="kpi">
+            <div class="small">Server type</div>
+            <div><strong>Rust 5x • EU • Modded • Solo/Duo/Trio</strong></div>
+          </div>
+        </div>
+
+        <div class="section" id="about">
+          <h2>About PRO RUST 5X EU</h2>
+          <p>
+            If you are searching for a <strong>Rust 5x server</strong> in the <strong>EU</strong> with strict <strong>Solo/Duo/Trio</strong>
+            team limits, this page exists to help you join quickly and share the correct links everywhere. The official website is the main hub
+            for full server details, rules, updates, and any feature changes.
+          </p>
+          <p>
+            Many Rust players find servers through search and social links. This landing page is intentionally lightweight and readable:
+            it includes the most important join information (IP, console connect, Discord, Steam group) plus natural keywords that match what
+            people typically search for.
+          </p>
+
+          <h3>Quick join options</h3>
+          <ul>
+            <li><strong>Website:</strong> the most up-to-date official information and announcements.</li>
+            <li><strong>Discord:</strong> community hub for news, support, and team coordination.</li>
+            <li><strong>Steam Group:</strong> follow updates and find the server community.</li>
+            <li><strong>F1 console:</strong> reliable direct connect: <code>connect 202.36.95.230:21394</code></li>
+          </ul>
+
+          <p class="muted">
+            Note: “Steam one-click join” works on systems that support the <code>steam://</code> protocol handler.
+          </p>
+        </div>
+
+        <div class="section" id="search">
+          <h2>What to search for</h2>
+          <p>
+            Want this page (and the server) to show up for the right searches? These are realistic search phrases players use when looking for
+            a <strong>Rust modded 5x</strong> server with team limits:
+          </p>
+          <ul>
+            <li><strong>pro rust 5x</strong></li>
+            <li><strong>rust 5x solo duo trio server</strong></li>
+            <li><strong>rust modded 5x server EU</strong></li>
+            <li><strong>rust 5x EU solo duo trio</strong></li>
+            <li><strong>rust 5x connect 202.36.95.230:21394</strong></li>
+          </ul>
+          <p class="muted">
+            Tip: share the canonical link to this landing page (GitHub Pages URL) in Discord promo channels and server lists.
+            Consistent linking helps search engines understand what page is “official”.
+          </p>
+        </div>
+
+        <div class="section" id="faq">
+          <h2>FAQ</h2>
+
+          <h3>How do I join with the in-game console?</h3>
+          <p>
+            Open Rust, press <strong>F1</strong>, paste <code>connect 202.36.95.230:21394</code>, then press Enter.
+          </p>
+
+          <h3>How do I share a one-click join?</h3>
+          <p>
+            Use the Steam join button on this page. In Discord, the safest method is usually the plain IP + connect line and the website/Discord links.
+          </p>
+
+          <h3>Where can I find rules and updates?</h3>
+          <p>
+            The official website and Discord are the primary sources for rules, updates, and announcements.
+          </p>
+        </div>
+
+        <div class="hr"></div>
+
+        <footer>
+          <div>
+            <strong>Official links:</strong>
+            Website • Discord • Steam Group • Direct connect
+          </div>
+          <div class="muted">
+            This is a community landing page for a Rust server. Not affiliated with Facepunch Studios.
+          </div>
+        </footer>
+      </section>
+    </main>
   </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copyBtn');
+      var cmd = document.getElementById('connectCmd');
+      var toast = document.getElementById('toast');
+
+      function showToast() {
+        toast.style.display = 'inline';
+        window.clearTimeout(showToast._t);
+        showToast._t = window.setTimeout(function () {
+          toast.style.display = 'none';
+        }, 1400);
+      }
+
+      if (btn && cmd) {
+        btn.addEventListener('click', function () {
+          var text = cmd.textContent || 'connect 202.36.95.230:21394';
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(showToast, showToast);
+          } else {
+            // Fallback
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta);
+            showToast();
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
-
-
